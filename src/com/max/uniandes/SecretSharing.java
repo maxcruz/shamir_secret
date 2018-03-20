@@ -17,7 +17,7 @@ public class SecretSharing {
         List<Integer> coefficients = new ArrayList<>();
         coefficients.add(secret);
         for (int i = 0; i < (required - 1); i++) {
-            int random = ThreadLocalRandom.current().nextInt(1, 1000 + 1);
+            int random = ThreadLocalRandom.current().nextInt(1, prime.intValue());
             coefficients.add(random);
         }
         Polynomial polynomial = new Polynomial(coefficients);
